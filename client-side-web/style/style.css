@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700,900|Muli:300,400,500,600,700,800,900&display=swap");
+
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    font-family: 'Barlow';
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+.button {
+    background-color: #00B074;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 300;
+    padding: 8px 18px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 91px;
+    width: 460px;
+    color: #FFF;
+    padding: 40px 0;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.option:hover {
+    opacity: 1;
+}
+
+.option svg {
+    margin-bottom: 5px;
+    fill: #FFF;
+}
+
+.option p {
+    font-weight: 600;
+}
+
+/* Landing Page */
+.body-container {
+    width: 100vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80');
+    display: flex;
+    align-items: center;
+}
+
+.background-darker {
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000000de, #00000029);
+}
+
+.logo {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    z-index: 20;
+}
+
+.content {
+    margin-left: 2vw;
+    color: white;
+    z-index: 21;
+}
+
+.content h1 {
+    font-size: 4.2vmax;
+    margin-top: 1vh;
+}
+
+.content h2 {
+    font-weight: 300;
+    font-size: 1.3vmax;
+}
+
+.content a {
+    margin-top: 3vh;
+    width: 200px;
+    text-align: center;
+    font-size: 2vmin;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: #021e52;
+    color: #ffffff96;
+}
+
+/* home */
+/* home header */
+header {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+.header-container {
+    margin-left: 15vw;
+    width: 70vw;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container ul {
+    display: flex;
+    gap: 3vw;
+}
+
+#dropdown {
+    position: relative;
+    background-color: #00B074;
+    width: 5vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1vmax;
+}
+#dropdown i{
+    color: white;
+}
+#dropdown #dropdown-menu {
+    position: absolute;
+    top: 5vh;
+    border: 2px solid #29292928;
+    font-size: 0.8rem;
+    text-align: left;
+    align-items: start;
+    color: black;
+    right: 0;
+    border-radius: 5px;
+    width: 6vw;
+    padding: 5px 0px;
+    display: none;
+    transition: all 0.5s ease-in;
+    background-color: white;
+}
+
+#dropdown #dropdown-menu a {
+    width: 5vw;
+    padding: 5px 0px;
+    padding-left: 1vw;
+    color: black;
+}
+
+#dropdown #dropdown-menu a:hover {
+    background-color: rgba(83, 83, 83, 0.151);
+}
+
+/* sections */
+.section1 {
+
+    width: 100vw;
+}
+
+/* home section */
+#home {
+    width: 100vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/hero/h1_hero.jpg');
+    display: flex;
+    align-items: center;
+}
+
+.home-container {
+    margin-left: 15vw;
+}
+
+.home-container h1 {
+    font-size: 4vmax;
+    font-weight: 900;
+    margin-bottom: 5vh;
+    color: #28395A;
+}
+
+.finder-form {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.finder-form input,
+.finder-form select {
+    border: none;
+    height: 7vh;
+    width: 17vw;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+.finder-form button {
+    width: 10vw;
+    height: 7vh;
+    border: none;
+}
+
+.finder-form div {
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.603);
+    height: 5vh;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+/* sections */
+section {
+    width: 100vw;
+}
+
+/* service section */
+.service-wrapper {
+    height: 110vh;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-wrapper p {
+    color: #00B074;
+}
+
+.service-wrapper h1 {
+    font-size: 3.5rem;
+    margin: 5vh 0px 8vh 0px;
+}
+
+.item-container {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.item-container div {
+    width: 16vw;
+    height: 25vh;
+    border: 1px solid #00b0755e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.item-container div img {
+    height: 10vh;
+    width: 10vh;
+}
+.item-container h3{
+    font-weight: 500;
+}
+
+.service-wrapper a {
+    margin-top: 15vh;
+    padding: 20px 70px;
+    border-radius: 8px;
+    border: 1px solid #021e52;
+    font-weight: 400;
+}
+
+/* cv area */
+.cv-area {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    background-image: url('../images/gallery/cv_bg.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-cv-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    z-index: 30;
+    height: 30vh;
+}
+
+.bg-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 100vw;
+    background-color: #021e52bd;
+}
+
+.content-cv-area p {
+    font-size: 1.4rem;
+}
+
+.content-cv-area h1 {
+    text-align: center;
+    font-size: 4rem;
+    width: 50vw;
+}
+
+.content-cv-area a {
+    padding: 20px 70px;
+    border-radius: 8px;
+    border: 1px solid #2B9BFF;
+    font-weight: 400;
+    color: #2B9BFF;
+}
+
+/* recent jobs */
+.recent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12vh;
+}
+
+.recent p {
+    color: #00B074;
+}
+
+.recent h1 {
+    font-size: 3.5rem;
+    margin: 5vh 0px;
+}
+
+.job-card-container {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    margin-bottom: 10vh;
+}
+
+.job-card {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12vh;
+    padding: 1.5vh 3vw;
+    transition: all 0.2s ease-in;
+}
+
+.details-container {
+    display: flex;
+    gap: 30px;
+}
+
+.job-card img {
+    height: 100px;
+    width: 100px;
+}
+
+.content-1 h4 {
+    margin-top: -0.59vh;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.sub-row {
+    display: flex;
+    width: 25vw;
+    justify-content: space-between;
+}
+
+.sub-row p {
+    color: #BBBBBB;
+}
+
+.content-2 {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-2 a {
+    padding: 10px 70px;
+    border-radius: 8px;
+    border: 1px solid #2B9BFF;
+    font-weight: 400;
+    color: #2B9BFF;
+}
+
+.content-2 p {
+    color: #BBBBBB;
+}
+
+.job-card:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Apply Process */
+.apply-conatiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/gallery/how-applybg.png');
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+}
+
+.apply-conatiner p {
+    color: #00B074;
+}
+
+.apply-conatiner h1 {
+    font-size: 3.5rem;
+    margin: 5vh 0px;
+    color: white;
+}
+.apply-card-container {
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+}
+
+.apply-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.3px);
+    -webkit-backdrop-filter: blur(14.3px);
+    padding: 3vh 2vw;
+    height: 35vh;
+}
+
+.apply-card:nth-child(2) {
+    padding-bottom: 10vh;
+}
+
+.apply-card img {
+    margin-top: 2vh;
+    width: 10vh;
+}
+
+.apply-card h3 {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.apply-card p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.603);
+    line-height: 30px;
+}
+/* Support Company */
+.support-container{
+    margin: 10vh 4vw;
+    width: 92vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.supprt-txt{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-between;
+}
+.supprt-txt p{
+    color: #00B074;
+    margin-bottom: 2vh;
+}
+.supprt-txt h1{
+    font-size: 3rem;
+    margin-bottom: 2vh;
+}
+.supprt-txt h5{
+    font-size: 1rem;
+}
+.supprt-txt h6{
+    width: 40vw;
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.616);
+}
+.supprt-txt a{
+    text-align: center;
+    width: 10vw;
+    padding: 20px 0px;
+    color: rgb(255, 255, 255);
+    background-color: #00B074;
+}
+.support-img{
+    width: 45vw;
+    height: 90vh;
+    background-image: url('../images/service/support-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
