@@ -20,7 +20,7 @@
                 <img src="../assets/logo/logo.png">
             </div>
             <nav>
-                <!-- <a class="button" href="./login and register/login.php" target="_blank">Login / Register AAAA</a> -->
+                <!-- <a class="button" href="./login and register/login.php" target="_blank">Login / Register AAAA AAAAAAAAAAAA</a> -->
             </nav>
         </header>
 
