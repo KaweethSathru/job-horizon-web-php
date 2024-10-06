@@ -100,29 +100,13 @@ if (isset($_POST["submit"]) && isset($_FILES['image'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOB HORIZON | Register as Company</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="../style/login.css">
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/flaticon.css">
-    <link rel="stylesheet" href="../css/price_rangs.css">
-    <link rel="stylesheet" href="../css/slicknav.css">
-    <link rel="stylesheet" href="../css/animate.min.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../css/themify-icons.css">
-    <link rel="stylesheet" href="../css/slick.css">
-    <link rel="stylesheet" href="../css/nice-select.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/login_and_register.css">
-    
 </head>
 
 <body>
 
-    <div id="preloader-active">
+    <!-- <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
@@ -131,62 +115,54 @@ if (isset($_POST["submit"]) && isset($_FILES['image'])) {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div>
-        <img class="logoAlignment" src="../../assets/logo/logo.png">
-    </div>
+    
 
-    <h1 class="textAlignment">Register as a Company</h1>
-
-    <div class="container">
-
+        <div class="login-wrapper">
+        <img src="../../assets/logo/logo.png" alt="">
+        <h1>Login as an Company</h1>
         <form action="company_register.php " method="post" enctype="multipart/form-data">
-            <label class="form-group">Username</label>
-            <div class="form-group">
-                <input type="text" class="form-control" name="company_username" placeholder="Enter Username">
-            </div>
-            <label class="form-group">Company Name</label>
-            <div class="form-group">
-                <input type="text" class="form-control" name="company_name" placeholder="Enter Name">
-            </div>
-            <label class="form-group">Website</label>
-            <div class="form-group">
-                <input type="text" class="form-control" name="company_website" placeholder="Enter website">
-            </div>
-            <label class="form-group">Email</label>
-            <div class="form-group">
-                <input type="email" class="form-control" name="company_email" placeholder="Enter email">
-            </div>
-            <label class="form-group">Company Description</label>
-            <div class="form-group">
-                <input type="text" class="form-control" name="company_description" placeholder="Enter company description">
-            </div>
-            <label class="form-group">Password</label>
-            <div class="form-group">
-                <input type="password" class="form-control" name="company_password" placeholder="Enter Password">
-            </div>
-            <label class="form-group">Repeat Password</label>
-            <div class="form-group">
-                <input type="password" class="form-control" name="repeat_company_password" placeholder="Re-enter Password">
-            </div>
-            <label class="form-group">Company Logo (Accepts PNG images only)</label>
-            <div class="form-group">
-                <input type="file" class="form-control" name="image">
-            </div>
-            <div class="form-btn">
-                <input type="submit" class="btn btn-primary loginBtn" value="Register" name="submit">
-            </div>
-        </form>
-
-        <div>
-            <br>
             <div>
-                <p>Already Registered <a href="company_login.php" class="loginText">Login Here</a></p>
+                <label for="username">Username</label>
+                <input type="text" name="company_username"  placeholder="Enter Username">
             </div>
-        </div>
-
+            <div>
+                <label for="name">Company Name</label>
+                <input type="text" name="company_name" placeholder="Enter Firstname">
+            </div>
+            <div>
+                <label for="web">Website</label>
+                <input type="text" name="company_website" placeholder="Enter Last Name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="company_email" placeholder="Enter Email">
+            </div>
+            <div>
+                <label for="email">Company Description</label>
+                <input type="text" name="company_description" placeholder="Enter Email">
+            </div>
+            <div>
+                <label for="passowrd">Password Give a password more than 8 characters</label>
+                <input type="password" name="company_password" placeholder="Enter passowrd">
+            </div>
+            <div>
+                <label for="passowrd">Repeat Your passowrd</label>
+                <input type="password" name="repeat_company_password" placeholder="Re-enter passowrd">
+            </div>
+            <div>
+                <label for="profile">Comapny Logo(Accepts PNG images only)</label>
+                <input type="file" name="image">
+            </div>
+            <input type="submit" value="Login">
+            <p>Already Registered <a href="company_login.php">login Here</a></p>
+        </form>
     </div>
+
+   
+
+    
 
     <!-- JS here -->
 
