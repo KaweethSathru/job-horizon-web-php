@@ -13,20 +13,8 @@
     <link rel="manifest" href="site.webmanifest">
 
     <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
-
-    <link rel="stylesheet" href="../client-side-web/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../client-side-web/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../client-side-web/css/price_rangs.css">
-    <link rel="stylesheet" href="../client-side-web/css/flaticon.css">
-    <link rel="stylesheet" href="../client-side-web/css/slicknav.css">
-    <link rel="stylesheet" href="../client-side-web/css/animate.min.css">
-    <link rel="stylesheet" href="../client-side-web/css/magnific-popup.css">
-    <link rel="stylesheet" href="../client-side-web/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../client-side-web/css/themify-icons.css">
-    <link rel="stylesheet" href="../client-side-web/css/slick.css">
-    <link rel="stylesheet" href="../client-side-web/css/nice-select.css">
-    <link rel="stylesheet" href="../client-side-web/css/style.css">
-    <link rel="stylesheet" href="../client-side-web/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style/find.css?V=<?php echo time() ?>">
 
 </head>
 
@@ -44,127 +32,117 @@
     </div>
     <!-- Preloader Start -->
 
-    <?php require_once('../client-side-web/components/header.php'); ?>
-
-    <main>
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="../client-side-web/assets/images/hero/about.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>Get your dream job</h2>
-                            </div>
-                        </div>
-                    </div>
+    <!-- header start -->
+    <header>
+        <div class="header-container">
+            <div class="log">
+                <img src="images/logo/logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="find_jobs.php">Find Jobs</a></li>
+            </ul>
+            <div onclick="dropDown()" id="dropdown">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-caret-down"></i>
+                <div id="dropdown-menu">
+                    <a href="">Applicants</a>
+                    <a href="">Company</a>
                 </div>
             </div>
         </div>
-        <!-- Hero Area End -->
+    </header>
+    <!-- header end -->
 
-        <!-- Job List Area Start -->
-        <div class="job-listing-area pt-120 pb-120">
-            <div class="container">
-                <div class="row">
-                    <!-- Left content -->
-                    <div class="col-xl-3 col-lg-3 col-md-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="small-section-tittle2 mb-45">
-                                    <div class="ion"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="12px">
-                                            <path fill-rule="evenodd" fill="rgb(27, 207, 107)" d="M7.778,12.000 L12.222,12.000 L12.222,10.000 L7.778,10.000 L7.778,12.000 ZM-0.000,-0.000 L-0.000,2.000 L20.000,2.000 L20.000,-0.000 L-0.000,-0.000 ZM3.333,7.000 L16.667,7.000 L16.667,5.000 L3.333,5.000 L3.333,7.000 Z" />
-                                        </svg>
-                                    </div>
-                                    <h4>Filter Jobs</h4>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Job Category Listing start -->
-                        <form action="../client-side-web/filter.php" method="POST">
-                            <div class="job-category-listing mb-50">
-                                <!-- single one -->
-                                <div class="single-listing">
-                                    <div class="small-section-tittle2">
-                                        <h4>Job Category</h4>
-                                    </div>
-                                    <!-- Select job items start -->
-                                    <div class="select-job-items2">
-                                        <select name="job_category">
-                                            <option value="All Category">All Category</option>
-                                            <option value="Banking and Insurance">Banking and Insurance</option>
-                                            <option value="UI/UX Design">UI/UX Design</option>
-                                            <option value="Sales and Marketing">Sales and Marketing</option>
-                                            <option value="Telecommunication">Telecommunication</option>
-                                            <option value="Construction">Construction</option>
-                                            <option value="Information Technology">Information Technology</option>
-                                            <option value="Architecture">Architecture</option>
-                                            <option value="Accounting and Auditing">Accounting and Auditing</option>
-                                        </select>
-                                    </div>
-                                    <!--  Select job items End-->
-                                </div>
-                                <div class="single-listing">
-                                    <div class="select-Categories pt-80 pb-50">
-                                        <div class="small-section-tittle2">
-                                            <h4>Job Location</h4>
-                                        </div>
-                                        <div class="select-job-items2">
-                                            <select name="job_location">
-                                                <option value="Anywhere">Anywhere</option>
-                                                <option value="Western Province">Western Province</option>
-                                                <option value="Central Province">Central Province</option>
-                                                <option value="Southern Province">Southern Province</option>
-                                                <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- single two -->
-                                <div class="single-listing">
-                                    <div class="select-Categories pt-80 pb-50">
-                                        <div class="small-section-tittle2">
-                                            <h4>Salary Between ($)</h4>
-                                        </div>
-                                        <label class="container">Any
-                                            <input type="radio" id="sal0" name="salary" value="Any" checked="true">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">1000-2000
-                                            <input type="radio" id="sal1" name="salary" value="1">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">2000-3000
-                                            <input type="radio" id="sal2" name="salary" value="2">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">3000-4000
-                                            <input type="radio" id="sal3" name="salary" value="3">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">4000-5000
-                                            <input type="radio" id="sal3" name="salary" value="4">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container">5000-more..
-                                            <input type="radio" id="sal4" name="salary" value="5">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="single-listing">
-                                    <input class="filter-form" type="submit" name='submit' value="Filter">
-                                </div>
-                            </div>
-                            <!-- Job Category Listing End -->
-                        </form>
+    <!-- Hero Area Start-->
+    <div class="hero-content">
+        <div class="bg-blue"></div>
+        <h1>Get Your Dream Job</h1>
+    </div>
+    <!-- Hero Area End -->
+    <!-- jobs container  -->
+
+    <div class="jobs-wrapper">
+        <div class="filter-wrapper">
+            <h3><i class="fa-solid fa-filter"></i>&nbsp;&nbsp;Filter Jobs</h3>
+            <div class="filter-conatiner">
+                <form action="" class="filter-form">
+                    <div class="form-selector">
+                        <label for="category">Job Category</label>
+                        <select name="" id="">
+                            <option value="All Category">All Category</option>
+                            <option value="Banking and Insurance">Banking and Insurance</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                            <option value="Sales and Marketing">Sales and Marketing</option>
+                            <option value="Telecommunication">Telecommunication</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Architecture">Architecture</option>
+                            <option value="Accounting and Auditing">Accounting and Auditing</option>
+                        </select>
                     </div>
+                    <div class="form-selector">
+                        <label for="category">Location</label>
+                        <select name="" id="">
+                            <option value="Anywhere">Anywhere</option>
+                            <option value="Western Province">Western Province</option>
+                            <option value="Central Province">Central Province</option>
+                            <option value="Southern Province">Southern Province</option>
+                            <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
+                        </select>
+                    </div>
+                    <div class="radio-btn">
+                        <h3>Sallery Between ($)</h3>
+                        <label class="radio-container">Any
+                            <input type="radio" name="option" checked>
+                            <span class="square-checkmark"></span>
+                        </label>
 
-                    <?php require_once('../client-side-web/job_list.php'); ?>
+                        <label class="radio-container">1000-200
+                            <input type="radio" name="option">
+                            <span class="square-checkmark"></span>
+                        </label>
 
-                    <!-- Pagination Start  -->
-                    <!-- <div class="pagination-area pb-115 text-center">
+                        <label class="radio-container">2000-3000
+                            <input type="radio" name="option">
+                            <span class="square-checkmark"></span>
+                        </label>
+                        <label class="radio-container">2000-3000
+                            <input type="radio" name="option">
+                            <span class="square-checkmark"></span>
+                        </label>
+                        <label class="radio-container">2000-3000
+                            <input type="radio" name="option">
+                            <span class="square-checkmark"></span>
+                        </label>
+                        <label class="radio-container">2000-3000
+                            <input type="radio" name="option">
+                            <span class="square-checkmark"></span>
+                        </label>
+                        <label class="radio-container">2000-3000
+                            <input type="radio" name="option">
+                            <span class="square-checkmark"></span>
+                        </label>
+                    </div>
+                    <input type="submit" value="Filter">
+                </form>
+            </div>
+        </div>
+        <?php require_once('../client-side-web/job_list.php'); ?>
+
+
+    </div>
+
+    <!-- jobs container end -->
+
+
+    <!-- Job List Area Start -->
+
+
+
+    <!-- Pagination Start  -->
+    <!-- <div class="pagination-area pb-115 text-center">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-12">
@@ -182,48 +160,20 @@
                             </div>
                         </div>
                     </div> -->
-                    <!--Pagination End  -->
+    <!--Pagination End  -->
 
-    </main>
 
-    <?php require_once('../client-side-web/components/footer.php'); ?>
 
-    <!-- JS here -->
-
-    <!-- All JS Custom Plugins Link Here here -->
-    <script src="../client-side-web/components/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="../client-side-web/components/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="../client-side-web/components/js/popper.min.js"></script>
-    <script src="../client-side-web/components/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="../client-side-web/components/js/jquery.slicknav.min.js"></script>
-
-    <!-- Jquery Slick , Owl-Carousel Range -->
-    <script src="../client-side-web/components/js/owl.carousel.min.js"></script>
-    <script src="../client-side-web/components/js/slick.min.js"></script>
-    <script src="../client-side-web/components/js/price_rangs.js"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="../client-side-web/components/js/wow.min.js"></script>
-    <script src="../client-side-web/components/js/animated.headline.js"></script>
-    <script src="../client-side-web/components/js/jquery.magnific-popup.js"></script>
-
-    <!-- Scrollup, nice-select, sticky -->
-    <script src="../client-side-web/components/js/jquery.scrollUp.min.js"></script>
-    <script src="../client-side-web/components/js/jquery.nice-select.min.js"></script>
-    <script src="../client-side-web/components/js/jquery.sticky.js"></script>
-
-    <!-- contact js -->
-    <script src="../client-side-web/components/js/contact.js"></script>
-    <script src="../client-side-web/components/js/jquery.form.js"></script>
-    <script src="../client-side-web/components/js/jquery.validate.min.js"></script>
-    <script src="../client-side-web/components/js/mail-script.js"></script>
-    <script src="../client-side-web/components/js/jquery.ajaxchimp.min.js"></script>
-
-    <!-- Jquery Plugins, main Jquery -->
-    <script src="../client-side-web/components/js/plugins.js"></script>
-    <script src="../client-side-web/components/js/main.js"></script>
-
+    <!-- footer -->
+    <div class="footer">
+        <p class="bottom-text">
+            JOB HORIZON | Copyright &copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script> All rights reserved
+        </p>
+    </div>
+    <script src="js/main.js?v=<?php echo time() ?>"></script>
 </body>
 
 </html>

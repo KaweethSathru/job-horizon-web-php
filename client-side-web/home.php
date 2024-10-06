@@ -96,7 +96,7 @@ $accCount = mysqli_num_rows($accCountResult);
             </div>
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="findjobs.html">Find Jobs</a></li>
+                <li><a href="find_jobs.php">Find Jobs</a></li>
             </ul>
             <div onclick="dropDown()" id="dropdown">
                 <i class="fa-solid fa-user"></i>
@@ -207,8 +207,8 @@ $accCount = mysqli_num_rows($accCountResult);
                     <?php
 
                     $query = "SELECT * FROM jobs
-          ORDER BY posted_date DESC
-          LIMIT 5";
+                    ORDER BY posted_date DESC
+                    LIMIT 5";
 
                     $result1 = mysqli_query($connection, $query);
 
@@ -397,7 +397,7 @@ $accCount = mysqli_num_rows($accCountResult);
 
     <!--  -->
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=<?php echo time() ?>"></script>
 
 </body>
 
