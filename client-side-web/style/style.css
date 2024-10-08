@@ -151,6 +151,7 @@ header {
     gap: 3vw;
 }
 
+
 #dropdown {
     position: relative;
     background-color: #00B074;
@@ -161,9 +162,15 @@ header {
     justify-content: center;
     gap: 10px;
     font-size: 1vmax;
+    cursor: pointer;
 }
 #dropdown i{
     color: white;
+}
+#dropdown p{
+    color: white;
+    cursor: pointer;
+    font-size: .8rem;
 }
 #dropdown #dropdown-menu {
     position: absolute;

@@ -33,25 +33,7 @@
     <!-- Preloader Start -->
 
     <!-- header start -->
-    <header>
-        <div class="header-container">
-            <div class="log">
-                <img src="images/logo/logo.png" alt="">
-            </div>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="find_jobs.php">Find Jobs</a></li>
-            </ul>
-            <div onclick="dropDown()" id="dropdown">
-                <i class="fa-solid fa-user"></i>
-                <i class="fa-solid fa-caret-down"></i>
-                <div id="dropdown-menu">
-                    <a href="">Applicants</a>
-                    <a href="">Company</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include_once("./components/header.php") ?>
     <!-- header end -->
 
 

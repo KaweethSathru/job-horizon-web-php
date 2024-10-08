@@ -33,27 +33,12 @@ if (isset($_POST["login"])) {
     <title>JOB HORIZON | Login as Applicant</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon/favicon.ico">
-
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/flaticon.css">
-    <link rel="stylesheet" href="../css/price_rangs.css">
-    <link rel="stylesheet" href="../css/slicknav.css">
-    <link rel="stylesheet" href="../css/animate.min.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../css/themify-icons.css">
-    <link rel="stylesheet" href="../css/slick.css">
-    <link rel="stylesheet" href="../css/nice-select.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/login_and_register.css">
+    <link rel="stylesheet" href="../style/login.css">
 </head>
 
 <body>
 
-    <div id="preloader-active">
+    <!-- <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
@@ -62,36 +47,28 @@ if (isset($_POST["login"])) {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div>
-        <img class="logoAlignment" src="../../assets/logo/logo.png">
-    </div>
-
-    <h1 class="textAlignment">Login as an Applicant</h1>
-
-    <div class="container">
-
+    <div class="login-wrapper">
+        <img src="../../assets/logo/logo.png" alt="">
+        <h1>Login as an Applicants</h1>
         <form action="applicant_login.php" method="post">
-            <label class="form-group">Username</label>
-            <div class="form-group">
-                <input type="text" placeholder="Enter Username" name="applicant_username" class="form-control">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="applicant_username" placeholder="Enter Username">
             </div>
-            <label class="form-group">Password</label>
-            <div class="form-group">
-                <input type="password" placeholder="Enter password" name="applicant_password" class="form-control">
+            <div>
+                <label for="passowrd">Password</label>
+                <input type="password" name="applicant_password" placeholder="Enter passowrd">
             </div>
-            <div class="form-btn">
-                <input type="submit" value="Login" name="login" class="btn btn-primary loginBtn">
-            </div>
+            <input type="submit" name="login" value="Login">
+            <p>Not registered yet? <a href="applicant_register.php">Register Here</a></p>
         </form>
-
-        <div>
-            <br>
-            <p>Not registered yet?<a href="applicant_register.php" class="loginText"> Register Here</a></p>
-        </div>
-
     </div>
+
+
+
+
 
     <!-- JS here -->
 

@@ -10,28 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOB HORIZON | Register as Applicant</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon/favicon.ico">
-
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/flaticon.css">
-    <link rel="stylesheet" href="../css/price_rangs.css">
-    <link rel="stylesheet" href="../css/slicknav.css">
-    <link rel="stylesheet" href="../css/animate.min.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../css/themify-icons.css">
-    <link rel="stylesheet" href="../css/slick.css">
-    <link rel="stylesheet" href="../css/nice-select.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/login_and_register.css">
+    
+    <link rel="stylesheet" href="../style/login.css">
 </head>
 
 <body>
 
-    <div id="preloader-active">
+    <!-- <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
@@ -40,15 +25,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div>
-        <img class="logoAlignment" src="../../assets/logo/logo.png">
-    </div>
 
-    <h1 class="textAlignment">Register as an Applicant</h1>
-
-    <div class="container">
+    <div class="login-wrapper">
+        <img src="../../assets/logo/logo.png" alt="">
+        <h1>Register as an Applicants</h1>
 
         <?php
         if (isset($_POST["submit"]) && isset($_FILES['image'])) {
@@ -135,47 +117,44 @@
             }
         }
         ?>
-
+        
+        
         <form action="applicant_register.php" method="post" enctype="multipart/form-data">
-            <label class="form-group">Username</label>
-            <div class="form-group">
-                <input type="text" class="form-control" name="applicant_username" placeholder="Enter Username">
-            </div>
-            <label class="form-group">First Name</label>
-            <div class="form-group">
-                <input type="text" class="form-control" name="applicant_first_name" placeholder="Enter First Name">
-            </div>
-            <label class="form-group">Last Name</label>
-            <div class="form-group">
-                <input type="text" class="form-control" name="applicant_last_name" placeholder="Enter Last Name">
-            </div>
-            <label class="form-group">Email</label>
-            <div class="form-group">
-                <input type="email" class="form-control" name="applicant_email" placeholder="Enter Email">
-            </div>
-            <label class="form-group">Password (Give a password more than 8 characters)</label>
-            <div class="form-group">
-                <input type="password" class="form-control" name="applicant_password" placeholder="Enter Password">
-            </div>
-            <label class="form-group">Repeat your password</label>
-            <div class="form-group">
-                <input type="password" class="form-control" name="repeat_applicant_password" placeholder="Re-enter your Password">
-            </div>
-            <label class="form-group">Profile Picture (Accepts JPEG images only)</label>
-            <div class="form-group">
-                <input type="file" class="form-control" name="image">
-            </div>
-            <div class="form-btn">
-                <input type="submit" class="btn btn-primary loginBtn" value="Register" name="submit">
-            </div>
-        </form>
-
-        <div>
-            <br>
             <div>
-                <p>Already Registered? <a href="applicant_login.php" class="loginText">Login Here</a></p>
+                <label for="username">Username</label>
+                <input type="text" name="applicant_username" placeholder="Enter Username">
             </div>
-        </div>
+            <div>
+                <label for="firstname">First Name</label>
+                <input type="text" name="applicant_first_name"  placeholder="Enter Firstname">
+            </div>
+            <div>
+                <label for="lastname">Last Name</label>
+                <input type="text" name="applicant_last_name" placeholder="Enter Last Name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="applicant_email" placeholder="Enter Email">
+            </div>
+            <div>
+                <label for="passowrd">Password Give a password more than 8 characters</label>
+                <input type="password" name="applicant_password" placeholder="Enter passowrd">
+            </div>
+            <div>
+                <label for="passowrd">Repeat Your passowrd</label>
+                <input type="password" name="repeat_applicant_password" placeholder="Re-enter passowrd">
+            </div>
+            <div>
+                <label for="profile">Profile Pictures</label>
+                <input type="file" name="image" >
+            </div>
+            <input type="submit" value="Register" name="submit">
+            <p>Already registered <a href="applicant_login.php">Register Here</a></p>
+        </form>
+        
+       
+
+        
 
     </div>
 
