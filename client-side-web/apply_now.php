@@ -46,6 +46,7 @@ if (isset($_GET['job_id']) && isset($_GET['company_id'])) {
     <link rel="stylesheet" href="../client-side-web/css/style.css">
     <link rel="stylesheet" href="../client-side-web/css/form.css">
     <link rel="stylesheet" href="../client-side-web/css/footer.css">
+    <link rel="stylesheet" href="style/find.css?V=<?php echo time() ?>">
 
 </head>
 
@@ -68,70 +69,44 @@ if (isset($_GET['job_id']) && isset($_GET['company_id'])) {
     <main>
 
         <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="../client-side-web/assets/images/hero/about.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>Apply Now</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-content">
+            <div class="bg-blue"></div>
+            <h1>Get Your Dream Job</h1>
         </div>
         <!-- Hero Area End -->
 
-        <center>
+        <!-- form area -->
+        <div class="form-container">
+            <form action="../client-side-web/components/application_successful.php?job_id=<?= $j_id ?>&company_id=<?= $com_id ?>" method="POST" enctype="multipart/form-data">
 
-            <div class="formbold-main-wrapper">
-                <div class="formbold-form-wrapper">
-                    <div class="formbold-mb-5 formbold-pt-3">
-                    </div>
-
-                    <form action="../client-side-web/components/application_successful.php?job_id=<?= $j_id ?>&company_id=<?= $com_id ?>" method="POST" enctype="multipart/form-data">
-
-                        <div class="formbold-mb-5">
-                            <label for="name" class="formbold-form-label"> Full Name </label>
-                            <input type="text" name="full_name" id="name" placeholder="Full Name" class="formbold-form-input" />
-                        </div>
-                        <div class="formbold-mb-5">
-                            <label for="phone" class="formbold-form-label"> Mobile Number </label>
-                            <input type="text" name="mobile_no" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
-                        </div>
-                        <div class="formbold-mb-5">
-                            <label for="email" class="formbold-form-label"> Email Address </label>
-                            <input type="email" name="email" id="email" placeholder="Enter your email" class="formbold-form-input" />
-                        </div>
-                        <div class="flex flex-wrap formbold--mx-3">
-                            <div class="w-full sm:w-half formbold-px-3">
-                                <div class="formbold-mb-5 w-full">
-                                    <label for="date" class="formbold-form-label"> CV </label>
-                                    <input type="file" name="cv" class="formbold-form-input" />
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-half formbold-px-3">
-                                <div class="formbold-mb-5">
-                                    <label for="time" class="formbold-form-label"> Cover Letter </label>
-                                    <input type="file" name="cover_letter" class="formbold-form-input" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="formbold-mb-5 formbold-pt-3">
-                        </div>
-
-                        <div>
-                            <input type="submit" name="submit" value="Apply for job" class="formbold-btn">
-                        </div>
-
-                    </form>
-
+                <div>
+                    <label for="full_name">Full Name</label>
+                    <input type="text" name="full_name" id="full_name" placeholder="Full Name">
                 </div>
-            </div>
+                <div>
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" name="mobile_no" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div>
+                    <label for="username">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
 
-        </center>
+                <div>
+                    <label for="cv">CV</label>
+                    <input type="file" name="cv" id="cv">
+                </div>
+                <div>
+                    <label for="cover_letter">Cover Letter</label>
+                    <input type="file" name="cover_letter" id="cover_letter">
+                </div>
 
+                <div>
+                    <input type="submit" value="Apply For Job" name="submit">
+                </div>
+            </form>
+
+        </div>
     </main>
 
     <?php require_once('../client-side-web/components/footer.php'); ?>

@@ -72,20 +72,8 @@ if ($result) {
 
     <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
 
-    <link rel="stylesheet" href="../client-side-web/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../client-side-web/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../client-side-web/css/price_rangs.css">
-    <link rel="stylesheet" href="../client-side-web/css/flaticon.css">
-    <link rel="stylesheet" href="../client-side-web/css/slicknav.css">
-    <link rel="stylesheet" href="../client-side-web/css/animate.min.css">
-    <link rel="stylesheet" href="../client-side-web/css/magnific-popup.css">
-    <link rel="stylesheet" href="../client-side-web/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="../client-side-web/css/themify-icons.css">
-    <link rel="stylesheet" href="../client-side-web/css/slick.css">
-    <link rel="stylesheet" href="../client-side-web/css/nice-select.css">
-    <link rel="stylesheet" href="../client-side-web/css/style.css">
-    <link rel="stylesheet" href="../client-side-web/css/footer.css">
-    <link rel="stylesheet" href="../client-side-web/css/tables.css">
+    
+        <link rel="stylesheet" href="style/find.css?V=<?php echo time() ?>">
 
 </head>
 
@@ -94,24 +82,45 @@ if ($result) {
     <main>
 
         <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="../client-side-web/assets/images/hero/about.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>My Applications</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-content">
+            <div class="bg-blue"></div>
+            <h1>Get Your Dream Job</h1>
         </div>
         <!-- Hero Area End -->
+        <!-- table -->
+        <div class="tableContainer">
+            <table id="customers">
+                <tr>
+                    <th>Application ID</th>
+                    <th>Company Name</th>
+                    <th>Job Category</th>
+                    <th>Applied Job Role</th>
+                    <th>Company Email</th>
+                    <th>Location</th>
+                    <th>Job Posted Date</th>
+                    <th>Deadline</th>
+                    <th>Options</th>
+                </tr>
+                <tr>
+                    <td>Application ID</td>
+                    <td>Company Name</td>
+                    <td>Job Category</td>
+                    <td>Applied Job Role</td>
+                    <td>Company Email</td>
+                    <td>Location</td>
+                    <td>Job Posted Date</td>
+                    <td>Deadline</td>
+                    <td>Options</td>
+                    <?php echo $applications_list ?>
+                </tr>
+            </table>
+        </div>
 
-        <section class="featured-job-area filterContainer">
 
-            <div class="tableContainer">
+
+        <!-- <section class="featured-job-area filterContainer"> -->
+
+        <!-- <div class="tableContainer">
                 <div class="row justify-content-center">
                     <div class="col-xl-10">
 
@@ -128,14 +137,13 @@ if ($result) {
                                 <th>Options</th>
                             </tr>
                             <tr>
-                                <?php echo $applications_list ?>
                             </tr>
                         </table>
 
                     </div>
                 </div>
-            </div>
-        </section>
+            </div> -->
+        <!-- </section> -->
 
         <?php require_once('../client-side-web/components/footer.php'); ?>
 

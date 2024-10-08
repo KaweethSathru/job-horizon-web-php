@@ -3,11 +3,11 @@
 
 <?php
 
-if (!isset($_SESSION['company_id'])) {
-    header("Location: ../client-side-web/login and register/company_login.php");
-} else {
-    $company_id = $_SESSION['company_id'];
-}
+// if (!isset($_SESSION['company_id'])) {
+//     header("Location: ../client-side-web/login and register/company_login.php");
+// } else {
+//     $company_id = $_SESSION['company_id'];
+// }
 
 ?>
 

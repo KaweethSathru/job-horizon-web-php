@@ -366,3 +366,75 @@ input[type=submit] {
     background-color: #021e52;
     color: #ffffff96;
 }
+/* .applications table*/
+.tableContainer{
+    width: 90vw;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+#customers{
+    width: 90vw;
+    margin-bottom: 40vh;
+}
+#customers th{
+    font-size: 1.3rem;
+    background-color: #00B074;
+}
+#customers td{
+    text-align: center;
+}
+/* form */
+.form-container{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+form {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    width: 20vw;
+    margin-bottom: 10vh;
+}
+form div{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+form input{
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid #e7e7e7;
+}
+form input[type=submit]{
+    
+    background-color: #00B074;
+    border: none;
+    color: white;
+    border-radius: 6px;
+}
+form input:focus{
+    outline: none;
+}
+form input::placeholder{
+    color: #c0c0c0;
+    font-weight: 100;
+    font-size: .8rem;
+}
+form p{
+    display: flex;
+    gap:5px;
+}
+form p a{
+    color: #00B074;
+}
