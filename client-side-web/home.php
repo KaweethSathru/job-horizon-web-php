@@ -167,18 +167,33 @@ $accCount = mysqli_num_rows($accCountResult);
         </section>
         <!-- Service section end -->
 
-        <!-- Online CV Area Start -->
+        <!-- How Apply Process -->
         <section>
-            <div class="cv-area">
-                <div class="bg-blue"></div>
-                <div class="content-cv-area">
-                    <p>Upload Your CV & Cover Letter</p>
-                    <h1>Make a Difference with Your Online Resume!</h1>
-                    <a href="find_jobs.php">FIND A JOB & UPLOAD YOUR CV & COVER LETTER</a>
+            <div class="apply-conatiner">
+                <p>APPLY PROCESS</p>
+                <h1>How it works</h1>
+                <div class="apply-card-container">
+                    <div class="apply-card">
+                        <img src="images/icons/tour-guide.png" alt="">
+                        <h3>1. Search a job</h3>
+                        <p>Search your favorite job from using search bar or find job page. You can also filter jobs according to your requirement.</p>
+                    </div>
+                    <div class="apply-card">
+                        <img src="images/icons/tour-guide.png" alt="">
+                        <h3>2. Upload your CV, Cover Letter & Apply for Job</h3>
+                        <p>After finding your wishing job go and apply for the job. Make sure to give correct information and upload your CV and cover letter.</p>
+                    </div>
+                    <div class="apply-card">
+                        <img src="images/icons/tour-guide.png" alt="">
+                        <h3>3. Get your job</h3>
+                        <p>You will be informed or contact soon by from your applied company. Good luck!</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Online CV Area End-->
+        <!-- How Apply Process end -->
+
+
 
         <!-- Recent jobs -->
         <section>
@@ -345,31 +360,18 @@ $accCount = mysqli_num_rows($accCountResult);
         <!-- recent jobs end -->
 
 
-        <!-- How Apply Process -->
+        <!-- Online CV Area Start -->
         <section>
-            <div class="apply-conatiner">
-                <p>APPLY PROCESS</p>
-                <h1>How it works</h1>
-                <div class="apply-card-container">
-                    <div class="apply-card">
-                        <img src="images/icons/tour-guide.png" alt="">
-                        <h3>1. Search a job</h3>
-                        <p>Search your favorite job from using search bar or find job page. You can also filter jobs according to your requirement.</p>
-                    </div>
-                    <div class="apply-card">
-                        <img src="images/icons/tour-guide.png" alt="">
-                        <h3>2. Upload your CV, Cover Letter & Apply for Job</h3>
-                        <p>After finding your wishing job go and apply for the job. Make sure to give correct information and upload your CV and cover letter.</p>
-                    </div>
-                    <div class="apply-card">
-                        <img src="images/icons/tour-guide.png" alt="">
-                        <h3>3. Get your job</h3>
-                        <p>You will be informed or contact soon by from your applied company. Good luck!</p>
-                    </div>
+            <div class="cv-area">
+                <div class="bg-blue"></div>
+                <div class="content-cv-area">
+                    <p>Upload Your CV & Cover Letter</p>
+                    <h1>Make a Difference with Your Online Resume!</h1>
+                    <a href="find_jobs.php">FIND A JOB & UPLOAD YOUR CV & COVER LETTER</a>
                 </div>
             </div>
         </section>
-        <!-- How Apply Process end -->
+        <!-- Online CV Area End-->
 
 
 
