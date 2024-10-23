@@ -78,7 +78,7 @@ if (!isset($_SESSION['company_id'])) {
             <div class="formbold-main-wrapper">
                 <div class="formbold-form-wrapper">
 
-                    <form action="../client-side-web/components/job_post_successful.php" method="POST">
+                    <form action="../company-side-web/components/job_post_successful.php" method="POST">
 
                         <div class="formbold-mb-5">
                             <label for="category" class="formbold-form-label"> Choose Job Category </label>

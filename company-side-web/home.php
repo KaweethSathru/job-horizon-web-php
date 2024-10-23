@@ -263,13 +263,6 @@ $accCount = mysqli_num_rows($accCountResult);
                 </div>
                 <!-- More Btn -->
                 <!-- Section Button -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="browse-btn2 text-center mt-50">
-                            <a href="find_jobs.php" class="border-btn2">Browse All Sectors</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- Our Services End -->

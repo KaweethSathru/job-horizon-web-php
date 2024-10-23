@@ -47,7 +47,7 @@ if ($result) {
             $jobs_list .= "<td class=\"text-left\"> {$record['education_and_experience']} </td>";
             $jobs_list .= "<td class=\"text-left\"> {$record['deadline']} </td>";
             $jobs_list .= "<td class=\"text-left\"> {$record['posted_date']} </td>";
-            $jobs_list .= "<td class=\"text-left\"> <a href=\"../client-side-web/components/cancel_job_post.php?company_id={$record['company_id']}\" onclick = \"return confirm('Are you sure to want remove this job post?');\"> <button class=\"cancelBtn\">Remove Post</button> </a> </td>";
+            $jobs_list .= "<td class=\"text-left\"> <a href=\"../company-side-web/components/cancel_job_post.php?company_id={$record['company_id']}\" onclick = \"return confirm('Are you sure to want remove this job post?');\"> <button class=\"cancelBtn\">Remove Post</button> </a> </td>";
             $jobs_list .= "</tr>";
             $jobs_list .= "</tbody>";
         }

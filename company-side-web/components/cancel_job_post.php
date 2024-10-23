@@ -15,7 +15,7 @@ if (!isset($_SESSION['company_id'])) {
 
 if (isset($_GET['company_id'])) {
 
-    // $company_id = mysqli_real_escape_string($connection, $_GET['company_id']);
+     //$company_id = mysqli_real_escape_string($connection, $_GET['company_id']);
 
     $query = "UPDATE jobs
               SET jobs_recycle_bin = 1
